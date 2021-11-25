@@ -19,7 +19,7 @@ dotEnv.config();
 
 
 // se define el puerto que va a escuchar basado en el archivo de configuración .env
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 // usamos el middleware cors para aceptar llamadas cors en nuestro servidor
 app.use(cors());
